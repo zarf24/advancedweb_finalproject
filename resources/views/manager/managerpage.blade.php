@@ -1,25 +1,28 @@
 <x-app-layout>
 
-</x-app-layout>
 
-<h3>List of Projects</h3>
+<x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('List of Projects') }}
+        </h2>
+    </x-slot>
 
-<a href="new">Add new Project</a></href>
+    </x-app-layout>
 
-<table border="border">
-<tr>
-    <td>Project Name</td>
-    <td>Category</td>
-    <td>Start date</td>
-    <td>End date</td>
-    <td>Duration</td>
-    <td>Cost</td>
-    <td>Stage</td>
-    <td>Status</td>
+<table style="border:1px solid black; width:80%; height:200px; margin-left:auto;margin-right:auto;">
+<tr style="border:1px solid black;">
+    <td><b>Project Name</b></td>
+    <td><b>Category</b></td>
+    <td><b>Start date</b></td>
+    <td><b>End date</b></td>
+    <td><b>Duration</b></td>
+    <td><b>Cost</b></td>
+    <td><b>Stage</b></td>
+    <td><b>Status</b></td>
 </tr>
 
 @foreach($data as $data)
-<tr>
+<tr style="border:1px solid black;">
     <td>{{$data->projectname}}</td>
     <td>{{$data->category}}</td>
     <td>{{$data->start}}</td>
@@ -28,11 +31,14 @@
     <td>{{$data->cost}}</td>
     <td>{{$data->stage}}</td>
     <td>{{$data->status}}</td>
-    <td><a href={{"upd/".$data->projectid}}>Update</a></href></td>
-    <td><a href={{"del/".$data->projectid}}>Delete</a></href></td>
+    <td><b><a href={{"upd/".$data->projectid}}>Update</a></href></b></td>
+    <td><b><a href={{"del/".$data->projectid}}>Delete</a></href></b></td>
 @endforeach
 </tr>
 </table>
+
+<x-jet-button><a href="new">Add new Project</a></href></x-jet-button>
+
 
 
 

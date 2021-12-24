@@ -24,6 +24,7 @@ class homeControl extends Controller
         }
 
         else{
+            
             $data=project::all();
             return view('leader.leaderpage',compact("data"));
         }

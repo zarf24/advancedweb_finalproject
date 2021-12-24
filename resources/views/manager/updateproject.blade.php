@@ -1,13 +1,18 @@
 <x-app-layout>
 
-</x-app-layout>
+<x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Update Project') }}
+        </h2>
+    </x-slot>
 
-<h1> Update Project </h1>
 
 <form action="/set" method="post">
 @csrf
 
-<input type="hidden" name="projectid" value="{{$disp['projectid']}}">
+<input type="hidden" name="projectid" value="{{$disp['projectid']}}"></br>
+
+<p>Updating {{$disp['projectname']}}...</p></br>
 
 <p>Project Stage:</p>
 <select name="stage">
@@ -24,8 +29,11 @@
     <option value="Extended">Extended</option>
     <option value="Completed">Completed</option>
   </select>
+</br></br>
 
-<button type="submit">Update</button>
-<button type="reset">Reset</button>
+<x-jet-button type="submit">Update</x-jet-button>
+<x-jet-button type="reset">Reset</x-jet-button>
 
 </form>
+
+</x-app-layout>

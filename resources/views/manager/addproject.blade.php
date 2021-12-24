@@ -1,8 +1,11 @@
 <x-app-layout>
 
-</x-app-layout>
+<x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Create new project') }}
+        </h2>
+    </x-slot>
 
-<h1> Add New Project </h1>
 
 <form action="/add" method="post">
 @csrf
@@ -18,15 +21,15 @@
 <br/>
 <p>Select Project Leader:</p>
 <select>
-    <option>Mohamad Amirul</option>
-    <option>Abu Bakar</option>
-    <option>Aiman Hazim</option>
+    <option>Raja Zarif Raja Petra</option>
   </select>
   <br><br>
 
-<button type="submit">Create Project</button>
-<button type="reset">Reset</button>
+<x-jet-button type="submit">Create Project</x-jet-button>
+<x-jet-button type="reset">Reset</x-jet-button>
 
 </form>
+
+</x-app-layout>
 
 

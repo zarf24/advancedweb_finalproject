@@ -1,44 +1,46 @@
 <x-app-layout>
 
-</x-app-layout>
+<x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Project details') }}
+        </h2>
+    </x-slot>
 <h1>Welcome, "user name"</h1>
-<h1>You are currently managing "project name"</h1>
-
-<h1>Project Details:</h1>
-<a href="">Edit</a></href> <a href="">Add members</a></href>
+<h1>You are currently the leader for "project name"</h1>
 
 
 <table border="border">
-@foreach($data as $data)
 <tr>
     <th>Project name:</th>
-    <td>{{$data->projectname}}</td>
+    <td></td>
   </tr>
   <tr>
     <th>Team members:</th>
-    <td>555 77 854</td>
+    <td> </td>
   </tr>
   <tr>
     <th>Start date:</th>
-    <td>{{$data->start}}</td>
+    <td></td>
   </tr>
   <tr>
     <th>End date:</th>
-    <td>{{$data->end}}</td>
+    <td></td>
   </tr>
   <tr>
     <th>Duration:</th>
-    <td>{{$data->duration}}</td>
+    <td></td>
   </tr>
   <tr>
     <th>Cost:</th>
-    <td>{{$data->cost}}</td>
+    <td></td>
   </tr>
   <tr>
     <th>Client:</th>
-    <td>{{$data->client}}</td>
+    <td></td>
   </tr>
 </table>
 
+<x-jet-button><a href="">Edit</a></href></x-jet-button> <x-jet-button><a href="">Add members</a></href></x-jet-button>
 
-@endforeach
+</x-app-layout>
+
