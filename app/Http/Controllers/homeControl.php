@@ -24,7 +24,8 @@ class homeControl extends Controller
         }
 
         else{
-            return view('leader.leaderpage');
+            $data=project::all();
+            return view('leader.leaderpage',compact("data"));
         }
 
     }
@@ -40,7 +41,21 @@ class homeControl extends Controller
 
     function showProject($projectid)
     {
-        return project::find($projectid);
+        $data=project::find($projectid);
+
+        return view('manager.updateproject', ['disp'=>$data]);
         
+    }
+
+    function setstatus(Request $req)
+    {
+        $data=project::find($req->projectid);
+
+        $data->stage=$req->stage;
+        $data->status=$req->status;
+
+        $data->save();
+
+        return redirect('/redirect');
     }
 }

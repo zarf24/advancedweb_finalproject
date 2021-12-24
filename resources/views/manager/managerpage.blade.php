@@ -8,7 +8,6 @@
 
 <table border="border">
 <tr>
-    <td>No.</td>
     <td>Project Name</td>
     <td>Category</td>
     <td>Start date</td>
@@ -21,7 +20,6 @@
 
 @foreach($data as $data)
 <tr>
-    <td>{{$data->projectid}}</td>
     <td>{{$data->projectname}}</td>
     <td>{{$data->category}}</td>
     <td>{{$data->start}}</td>
@@ -32,8 +30,9 @@
     <td>{{$data->status}}</td>
     <td><a href={{"upd/".$data->projectid}}>Update</a></href></td>
     <td><a href={{"del/".$data->projectid}}>Delete</a></href></td>
-</tr>
 @endforeach
+</tr>
 </table>
+
 
 

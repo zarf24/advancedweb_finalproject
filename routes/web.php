@@ -26,6 +26,7 @@ Route::get("/redirect",[homeControl::class,"redirectFunct"]);
 
 Route::view("new",'manager.addproject');
 Route::POST("add",[projectControl::class,"addData"]);
+Route::POST("set",[homeControl::class,"setstatus"]);
 Route::get('del/{projectid}',[homeControl::class,"deleteProject"]);
 Route::get('upd/{projectid}',[homeControl::class,"showProject"]);
 

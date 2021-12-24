@@ -9,6 +9,8 @@ class project extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'projectid';
+
     public function users()
     {
         return $this->belongsTo(related:'App\User');

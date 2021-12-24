@@ -17,13 +17,13 @@ class CreateProjectsTable extends Migration
             $table->id('projectid');
             $table->string('projectname');
             $table->string('category');
-            $table->string('start')->nullable();
-            $table->string('end')->nullable();
-            $table->string('duration')->nullable();
-            $table->string('cost')->nullable();
-            $table->string('client')->nullable();
-            $table->string('stage')->nullable();
-            $table->string('status')->nullable();
+            $table->string('start')->
+            $table->string('end')->
+            $table->string('duration')->
+            $table->string('cost')->
+            $table->string('client')->
+            $table->string('stage')->
+            $table->string('status')->
             $table->timestamps();
         });
     }
